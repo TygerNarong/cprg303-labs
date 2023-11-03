@@ -1,10 +1,17 @@
+
+
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import {SafeAreaView, StyleSheet, Pressable, View, Text, ScrollView, TextInput, Button
+} from 'react-native';
+import ToDoList from './assets/ToDoList';
+import ToDoForm from './assets/ToDoForm';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <ToDoList />
+      <ToDoForm />
       <StatusBar style="auto" />
     </View>
   );
