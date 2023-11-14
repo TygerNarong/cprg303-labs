@@ -10,11 +10,19 @@ export default function App() {
     'Go to park',
     'Walk dog'
   ]);
+
+  const addTask = (newTask) => {
+    if (!tasks.includes(newTask)) {
+      setTasks(prevTasks => [...prevTasks, newTask]);
+    } else {
+      Alert.alert('Error', 'Task already exists.'); 
+    }
+  }
  
     return (
         <SafeAreaView>
             <ToDoList tasks={tasks} />
-            <ToDoForm />
+            <ToDoForm onAdd={addTask}/>
         </SafeAreaView>
     );
 }
